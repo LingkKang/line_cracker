@@ -4,5 +4,9 @@ description = "Display warning when a line of code is too long."
 authors = ["Lingkang <contact@lingkang.dev>"]
 keywords = ["cli", "lint", "file", "line break"]
 license = "MIT"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
+
+[[bin]]
+name = "cargo-line_cracker"
+path = "src/main.rs"

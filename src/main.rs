@@ -4,7 +4,20 @@ const MAX_LEN: usize = 80;
 
 fn main() {
     let mut args: Vec<String> = std::env::args().collect();
-    if args.len() != 2 {
+
+    // for arg in args.iter() {
+    //     println!("[DEBUG] {}", arg);
+    // }
+
+    if args.get(1) == Some(&PKG_NAME.to_string()) {
+        // println!("[DEBUG] Called inside `cargo`, removing the first arg");
+        args.remove(1);
+    }
+
+    let len = args.len();
+    // println!("[DEBUG] len = {}", len);
+
+    if len != 2 {
         print_version();
         print_help();
         std::process::exit(0);
@@ -23,6 +36,8 @@ fn main() {
     }
 
     check_file(&first_arg);
+
+    println!("[INFO] checked: {} ", first_arg);
 }
 
 fn print_help() {
@@ -50,12 +65,14 @@ fn check_file(file_path: &str) {
         .map(String::from)
         .enumerate()
     {
-        if line.len() > MAX_LEN {
+        let length = line.len();
+        if length > MAX_LEN {
             println!(
-                "WARN: {}:{}: Line is longer than {} characters",
+                "[WARN] {}:{}: expected {} chars but got {}",
                 file_path,
                 line_num + 1,
-                MAX_LEN
+                MAX_LEN,
+                length
             );
         }
     }
