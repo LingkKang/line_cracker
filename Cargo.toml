@@ -3,5 +3,6 @@ name = "line_cracker"
 description = "Display warning when a line of code is too long."
 authors = ["Lingkang <contact@lingkang.dev>"]
 keywords = ["cli", "lint", "file", "line break"]
+license = "MIT"
 version = "0.1.0"
 edition = "2021"
