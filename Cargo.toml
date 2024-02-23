@@ -2,6 +2,6 @@
 name = "line_cracker"
 description = "Display warning when a line of code is too long."
 authors = ["Lingkang <contact@lingkang.dev>"]
-categories = ["development-tools", "command-line-interface", "text-processing"]
-version = "0.0.1"
+keywords = ["cli", "lint", "file", "line break"]
+version = "0.1.0"
 edition = "2021"
