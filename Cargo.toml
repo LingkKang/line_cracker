@@ -1,0 +1,7 @@
+[package]
+name = "line_cracker"
+description = "Display warning when a line of code is too long."
+authors = ["Lingkang <contact@lingkang.dev>"]
+categories = ["development-tools", "command-line-interface", "text-processing"]
+version = "0.0.1"
+edition = "2021"
