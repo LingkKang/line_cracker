@@ -2,10 +2,11 @@
 name = "line_cracker"
 description = "Display warning when a line of code is too long."
 authors = ["Lingkang <contact@lingkang.dev>"]
-keywords = ["cli", "lint", "file", "line break"]
+keywords = ["cli", "lint", "file"]
 license = "MIT"
 version = "0.1.1"
 edition = "2021"
+readme = "README.md"
 
 [[bin]]
 name = "cargo-line_cracker"
