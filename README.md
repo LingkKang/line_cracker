@@ -23,8 +23,9 @@ cargo line-cracker <fine_name>
 
 ## Todo
 
+- [x] Escape non-text files
 - [ ] Scan directory
 - [ ] Scan multiple files
 - [ ] Custom line length
-- [ ] Escape non-text files
+- [ ] Colorize output
 - [ ] ...

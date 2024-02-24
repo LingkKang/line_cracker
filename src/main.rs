@@ -59,6 +59,11 @@ fn check_file(file_path: &str) {
         std::process::exit(1);
     }
 
+    if std::fs::read_to_string(path).unwrap().contains('\0') {
+        println!("[INFO] file corrupted or non-text, skipped: {}", file_path);
+        std::process::exit(0);
+    }
+
     for (line_num, line) in std::fs::read_to_string(file_path)
         .unwrap()
         .lines()
