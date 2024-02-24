@@ -5,17 +5,17 @@ const MAX_LEN: usize = 80;
 fn main() {
     let mut args: Vec<String> = std::env::args().collect();
 
-    // for arg in args.iter() {
-    //     println!("[DEBUG] {}", arg);
-    // }
+    for arg in args.iter() {
+        println!("[DEBUG] {}", arg);
+    }
 
     if args.get(1) == Some(&PKG_NAME.to_string()) {
-        // println!("[DEBUG] Called inside `cargo`, removing the first arg");
+        println!("[DEBUG] Called inside `cargo`, removing the first arg");
         args.remove(1);
     }
 
     let len = args.len();
-    // println!("[DEBUG] len = {}", len);
+    println!("[DEBUG] len = {}", len);
 
     if len != 2 {
         print_version();
